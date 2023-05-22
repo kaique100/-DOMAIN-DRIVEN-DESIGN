@@ -1,0 +1,58 @@
+package br.com.fiap.beans;
+
+public abstract class Pessoa {
+	
+	private String nome;
+	private String email;
+	protected String logradouro;
+	private double renda;
+	
+	public Pessoa() {
+		super();
+	}
+
+	public Pessoa(String nome, String email, String logradouro, double renda) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		this.logradouro = logradouro;
+		this.renda = renda;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+	public double getRenda() {
+		return renda;
+	}
+
+	public void setRenda(double renda) {
+		this.renda = renda;
+	}
+	
+	
+	public abstract String indetificacao();
+	
+	public abstract String taxa();
+}
