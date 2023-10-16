@@ -17,21 +17,22 @@ public class TesteAtualizar {
 		return Integer.parseInt(JOptionPane.showInputDialog(j));
 	}
 	
-	static double real(String j) {
+	static double real (String j) {
 		return Double.parseDouble(JOptionPane.showInputDialog(j));
 	}
 	
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
+		// Instanciar objetos
 		Livro objLivro = new Livro();
 		
 		LivroDAO dao = new LivroDAO();
 		
 		objLivro.setCodigo(inteiro("Digite o codigo a ser atualizado"));
 		objLivro.setTitulo(texto("Titulo"));
-		objLivro.setValor(real("Valor"));
+		objLivro.setValor(real("Valor do Livro"));
 		
 		System.out.println(dao.alterar(objLivro));
+
 	}
 
 }

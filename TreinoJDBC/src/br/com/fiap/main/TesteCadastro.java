@@ -9,7 +9,6 @@ import br.com.fiap.dao.LivroDAO;
 
 public class TesteCadastro {
 	
-
 	static String texto(String j) {
 		return JOptionPane.showInputDialog(j);
 	}
@@ -18,21 +17,26 @@ public class TesteCadastro {
 		return Integer.parseInt(JOptionPane.showInputDialog(j));
 	}
 	
-	static double real(String j) {
+	static double real (String j) {
 		return Double.parseDouble(JOptionPane.showInputDialog(j));
 	}
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
+		// Instanciar objetos 
+		
 		Livro objLivro = new Livro();
 		
 		LivroDAO dao = new LivroDAO();
 		
 		objLivro.setCodigo(inteiro("Codigo"));
-		objLivro.setTitulo(texto("titulo"));
+		objLivro.setTitulo(texto("Titulo"));
 		objLivro.setValor(real("Valor"));
 		
+		
+		
 		System.out.println(dao.inserir(objLivro));
+		
+
 	}
 
 }

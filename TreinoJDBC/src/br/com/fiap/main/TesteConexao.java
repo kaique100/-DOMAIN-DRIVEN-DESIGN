@@ -8,13 +8,13 @@ import br.com.fiap.conexoes.ConexaoFactory;
 public class TesteConexao {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
 		
-		Connection c = new ConexaoFactory().Conexao();
+		Connection c = new ConexaoFactory().conexao();
 		
-		System.out.println("Conectado ao banco de dados");
+		System.out.println("Conectado com o Banco de Dados");
 		
 		c.close();
+
 	}
 
 }
